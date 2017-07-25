@@ -1,0 +1,11 @@
+<launch>
+
+	<!--node name="base_stp" pkg="tf" type="static_transform_publisher" args="0 0 0 0 1.570796327 -1.570796327 /camera /base_link  100"/ -->
+	<node name="base_stp" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /base_link /camera 100"/>
+	<node name="laser_base" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /base_link /platform 100"/>	
+	<node name="laser_stp" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /platform /laser 100"/>
+	<node name="imu_laser" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0  /mti/data /platform 100"/>
+
+	
+
+</launch>
