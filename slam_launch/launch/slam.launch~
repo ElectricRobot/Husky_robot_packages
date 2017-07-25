@@ -1,0 +1,12 @@
+ <launch>
+ 
+ <param name="/use_sim_time" value="false"/>ros
+ 
+ <include file="$(find slam_launch)/launch/hector_mapping.launch"/>
+ 
+ <include file="$(find slam_launch)/launch/geotiff_mapper.launch">
+ <param name="trajectory_source_frame_name" value="scanmatcher_frame"/> 
+ </include>
+ 
+ </launch>
+
